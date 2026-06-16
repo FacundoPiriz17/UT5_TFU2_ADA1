@@ -429,11 +429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\andis\\UT5_TFU\\UT5_TFU\\UT5_TFU\\UT5_TFU.csproj",
+      "projectUniqueName": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
       "projectName": "UT5_TFU",
-      "projectPath": "C:\\andis\\UT5_TFU\\UT5_TFU\\UT5_TFU\\UT5_TFU.csproj",
+      "projectPath": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
       "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
-      "outputPath": "C:\\andis\\UT5_TFU\\UT5_TFU\\UT5_TFU\\obj\\",
+      "outputPath": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
