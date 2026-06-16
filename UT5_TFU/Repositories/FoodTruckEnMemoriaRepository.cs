@@ -166,7 +166,7 @@ public sealed class FoodTruckEnMemoriaRepository : IFoodTruckRepository
             ConstruirPedidoSemilla(
                 id: 1,
                 clienteId: 1,
-                nombreCliente: "Miguel",
+                nombreCliente: "Facundo",
                 puestoComidaId: 2,
                 estado: EstadoPedido.EnPreparacion,
                 pago: new Pago
@@ -192,7 +192,7 @@ public sealed class FoodTruckEnMemoriaRepository : IFoodTruckRepository
             ConstruirPedidoSemilla(
                 id: 2,
                 clienteId: 1,
-                nombreCliente: "Miguel",
+                nombreCliente: "Facundo",
                 puestoComidaId: 1,
                 estado: EstadoPedido.EnPreparacion,
                 pago: new Pago
@@ -225,7 +225,7 @@ public sealed class FoodTruckEnMemoriaRepository : IFoodTruckRepository
             ConstruirPedidoSemilla(
                 id: 3,
                 clienteId: 2,
-                nombreCliente: "Valentina",
+                nombreCliente: "Constanza",
                 puestoComidaId: 3,
                 estado: EstadoPedido.Entregado,
                 pago: new Pago
