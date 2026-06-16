@@ -1,0 +1,6 @@
+@UT5_TFU_HostAddress = http://localhost:5183
+
+GET {{UT5_TFU_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
