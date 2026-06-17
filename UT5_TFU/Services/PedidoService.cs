@@ -217,7 +217,17 @@ public sealed class PedidoService : IPedidoService
         repository.ActualizarPedido(pedido);
         return ResultadoService<DetallePedidoResponse>.Exito(ToDetalleResponse(pedido));
     }
+    public ResultadoService<EstadoPago> ObtenerEstadoPago(int id)
+    {
+        var pedido = repository.ObtenerPedido(id);
 
+        if (pedido is null)
+        {
+            return ResultadoService<EstadoPago>.NoEncontrado("No se encontro el pedido solicitado.");
+        }
+
+        return ResultadoService<EstadoPago>.Exito(pedido.Pago.Estado);
+    }
     private ResumenPedidoResponse ToResumenResponse(Pedido pedido)
     {
         var puestoComida = repository.ObtenerPuestoComida(pedido.PuestoComidaId);

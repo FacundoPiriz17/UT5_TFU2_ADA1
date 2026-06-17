@@ -25,6 +25,16 @@ public sealed class PagoStrategyEfectivo : IPagoStrategy
             Monto = monto
         };
     }
+    
+    public Pago ObtenerEstado(decimal monto, bool simularRechazo)
+    {
+        return new Pago
+        {
+            Metodo = Metodo,
+            Estado = simularRechazo ? EstadoPago.Rechazado : EstadoPago.Pagado,
+            Monto = monto
+        };
+    }
 }
 
 public sealed class PagoStrategyTarjeta : IPagoStrategy

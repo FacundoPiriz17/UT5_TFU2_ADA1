@@ -95,6 +95,17 @@ public sealed class PedidosController : ControllerBase
         var resultado = pedidoService.ConfirmarPago(id, request);
         return ConvertirResultado(resultado);
     }
+    
+    [HttpGet("{id:int}/pago/estado")]
+    [SwaggerOperation(
+        Summary = "Muestra el estado del pago.",
+        Description = "UC4/UC5 - Cajero/Cliente. Devuelve el estado actual del pago del pedido."
+    )]
+    public ActionResult<EstadoPago> ObtenerEstadoPago(int id)
+    {
+        var resultado = pedidoService.ObtenerEstadoPago(id);
+        return ConvertirResultado(resultado);
+    }
 
     private ActionResult<ActualizarEstadoPedidoResponse> CambiarEstado(int id, EstadoPedido estado)
     {

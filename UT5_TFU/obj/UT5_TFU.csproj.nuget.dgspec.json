@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj": {}
+    "C:\\Repos\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj": {}
   },
   "projects": {
-    "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj": {
+    "C:\\Repos\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
+        "projectUniqueName": "C:\\Repos\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
         "projectName": "UT5_TFU",
-        "projectPath": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
+        "projectPath": "C:\\Repos\\UT5_TFU2_ADA1\\UT5_TFU\\UT5_TFU.csproj",
         "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
-        "outputPath": "C:\\andis\\UT5_TFU2_ADA1\\UT5_TFU\\obj\\",
+        "outputPath": "C:\\Repos\\UT5_TFU2_ADA1\\UT5_TFU\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -75,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

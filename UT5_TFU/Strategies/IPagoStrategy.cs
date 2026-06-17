@@ -7,4 +7,5 @@ public interface IPagoStrategy
     MetodoPago Metodo { get; }
     Pago Iniciar(decimal monto, bool simularRechazo);
     Pago Confirmar(decimal monto, bool simularRechazo);
+    
 }
