@@ -96,6 +96,17 @@ public sealed class PedidosController : ControllerBase
         return ConvertirResultado(resultado);
     }
     
+    [HttpPost("{id:int}/pago/realizar")]
+    [SwaggerOperation(
+        Summary = "Realiza el pago de un pedido",
+        Description = "UC5 - Cliente. Se usa para realizar el pago del pedido."
+    )]
+    public ActionResult<DetallePedidoResponse> RealizarPago(int id)
+    {
+        var resultado = pedidoService.RealizarPago(id);
+        return ConvertirResultado(resultado);
+    }
+    
     [HttpGet("{id:int}/pago/estado")]
     [SwaggerOperation(
         Summary = "Muestra el estado del pago.",

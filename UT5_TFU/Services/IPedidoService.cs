@@ -11,6 +11,7 @@ public interface IPedidoService
     ResultadoService<DetallePedidoResponse> CrearPedido(CrearPedidoRequest request);
     ResultadoService<ActualizarEstadoPedidoResponse> ActualizarEstado(int id, ActualizarEstadoPedidoRequest request);
     ResultadoService<DetallePedidoResponse> ConfirmarPago(int id, ConfirmarPagoRequest request);
-    public ResultadoService<EstadoPago> ObtenerEstadoPago(int id);
+    ResultadoService<EstadoPago> ObtenerEstadoPago(int id);
+    ResultadoService<DetallePedidoResponse> RealizarPago(int id);
 
 }

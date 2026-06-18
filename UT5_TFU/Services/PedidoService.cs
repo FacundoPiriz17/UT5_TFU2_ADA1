@@ -143,6 +143,41 @@ public sealed class PedidoService : IPedidoService
         var pedidoGuardado = repository.AgregarPedido(pedido);
         return ResultadoService<DetallePedidoResponse>.Exito(ToDetalleResponse(pedidoGuardado));
     }
+    
+    public ResultadoService<DetallePedidoResponse> RealizarPago(
+        int id)
+    {
+        var pedido = repository.ObtenerPedido(id);
+
+        if (pedido is null)
+        {
+            return ResultadoService<DetallePedidoResponse>
+                .NoEncontrado("No se encontro el pedido solicitado.");
+        }
+        
+        if (pedido.Pago.Estado == EstadoPago.Pagado)
+        {
+            return ResultadoService<DetallePedidoResponse>
+                .ErrorValidacion("El pedido ya fue pagado.");
+        }
+        else
+        {
+            pedido.Pago.Estado = EstadoPago.Pagado;
+        }
+
+        var pago = pagoService.IniciarPago(
+            pedido.Pago.Metodo,
+            pedido.MontoTotal,
+            false
+            );
+
+        pedido.Pago = pago;
+
+        repository.ActualizarPedido(pedido);
+
+        return ResultadoService<DetallePedidoResponse>
+            .Exito(ToDetalleResponse(pedido));
+    }
 
     public ResultadoService<ActualizarEstadoPedidoResponse> ActualizarEstado(int id, ActualizarEstadoPedidoRequest request)
     {

@@ -29,6 +29,11 @@ public sealed class ConfirmarPagoRequest
     public bool SimularRechazoPago { get; init; }
 }
 
+public sealed class RealizarPagoRequest
+{
+    public MetodoPago MetodoPago { get; init; }
+    public bool SimularRechazoPago { get; init; }
+}
 public sealed record ResumenPedidoResponse(
     int Id,
     int ClienteId,
