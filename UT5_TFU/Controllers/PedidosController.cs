@@ -117,6 +117,16 @@ public sealed class PedidosController : ControllerBase
         var resultado = pedidoService.ObtenerEstadoPago(id);
         return ConvertirResultado(resultado);
     }
+    
+    [HttpGet("/api/clientes/{clienteId:int}/notificaciones")]
+    [SwaggerOperation(
+        Summary = "Lista las notificaciones del cliente.",
+        Description = "UC5 - Cliente. Devuelve avisos de pedidos listos para retirar."
+    )]
+    public ActionResult<IReadOnlyList<NotificacionResponse>> ObtenerNotificaciones(int clienteId)
+    {
+        return Ok(pedidoService.ObtenerNotificaciones(clienteId));
+    }
 
     private ActionResult<ActualizarEstadoPedidoResponse> CambiarEstado(int id, EstadoPedido estado)
     {

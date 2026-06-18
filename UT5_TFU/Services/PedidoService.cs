@@ -27,6 +27,7 @@ public sealed class PedidoService : IPedidoService
         this.pagoService = pagoService;
         this.estadoObservers = estadoObservers;
     }
+    
 
     public IReadOnlyList<ResumenPedidoResponse> ObtenerPedidos(int? clienteId = null)
     {
@@ -350,5 +351,15 @@ public sealed class PedidoService : IPedidoService
             EstadoPedido.Cancelado => "Cancelado",
             _ => estado.ToString()
         };
+    }
+    
+    public IReadOnlyList<NotificacionResponse> ObtenerNotificaciones(int clienteId)
+    {
+        return repository.ObtenerPedidosPorCliente(clienteId)
+            .Where(pedido => !string.IsNullOrWhiteSpace(pedido.UltimaNotificacion))
+            .Select(pedido => new NotificacionResponse(
+                pedido.Id,
+                pedido.UltimaNotificacion!))
+            .ToList();
     }
 }

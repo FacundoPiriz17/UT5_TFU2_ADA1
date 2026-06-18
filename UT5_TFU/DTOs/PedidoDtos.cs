@@ -12,6 +12,10 @@ public sealed class CrearPedidoRequest
     public bool SimularRechazoPago { get; init; }
 }
 
+public sealed record NotificacionResponse(
+    int PedidoId,
+    string Mensaje);
+
 public sealed class ItemPedidoRequest
 {
     public int ProductoId { get; init; }

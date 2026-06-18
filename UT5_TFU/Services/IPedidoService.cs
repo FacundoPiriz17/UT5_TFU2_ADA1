@@ -13,5 +13,6 @@ public interface IPedidoService
     ResultadoService<DetallePedidoResponse> ConfirmarPago(int id, ConfirmarPagoRequest request);
     ResultadoService<EstadoPago> ObtenerEstadoPago(int id);
     ResultadoService<DetallePedidoResponse> RealizarPago(int id);
+    IReadOnlyList<NotificacionResponse> ObtenerNotificaciones(int clienteId);
 
 }
